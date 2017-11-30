@@ -23,6 +23,7 @@ function AllureReporter(baseReporterDecorator, config) {
                 }, Number.NEGATIVE_INFINITY);
             this.allure.endSuite(stopTime);
         }, this);
+		this.suites = {};
     };
 
     this.specSkipped = this.specSuccess = this.specFailure = function(browser, result) {
